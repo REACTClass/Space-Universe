@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Space Battle</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Space Universe</h1>
+  <div id="message-container">
+    <p id="message-el">CLICK ATTACK TO PLAY. OPEN CONSOLE WITH GOOGLE CHROME FOR A SURPRISE</p>
+  </div>
+
+  <div id="btn-div">
+    <button id="attack-el">ATTACK</button>
+    <button id="retreat-el" onclick="gameOver()">RETREAT</button>
+    <button id="reset-el" onclick="reset()">RESET</button>
+  </div>
+
+  <audio controls autoplay volume=0.1 loop hidden src="space-sounds.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+
+</html>

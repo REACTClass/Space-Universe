@@ -1,0 +1,62 @@
+body {
+  background-Image: url(./Backgorund.gif);
+  color: white;
+  font-weight: bold;
+}
+
+button {
+  height: 75px;
+  width: 120px;
+  background-color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border: hidden;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+#attack-el {
+  color: red;
+}
+
+#retreat-el {
+  color: white;
+}
+
+#reset-el {
+  color: green;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div {
+  height: 120px;
+  width: 120px;
+  background-color: black;
+}
+
+#btn-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+#message-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-bottom: 100px;
+  width: 300px;
+}
