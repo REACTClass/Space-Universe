@@ -1,5 +1,7 @@
 let message = ""
+let messageTwo = ""
 let messageEl = document.getElementById('message-el')
+let alienMessage = document.getElementById('alien-message')
 let retreatEl = document.getElementById('retreat-el')
 let btnEl = document.getElementById('attack-el')
 
@@ -36,16 +38,16 @@ class AlienSpaceship {
   attack(player) {
     if (Math.random().toFixed(1) < this.accuracy) {
       player.hull -= this.firepower;
-      message = "YOU GOT HIT! Alien: Ha! Better Luck Next Time";
+      messageTwo = "YOU GOT HIT! Alien: Ha! Better Luck Next Time";
 
       console.log("%c YOU GOT HIT! Alien: Ha! Better Luck Next Time", "background:red; color:white; font-weight:bold; font-size:25px; color:black;")
 
     } else {
-      message = "ALIEN MISSED! Alien: Narrow escape";
+      messageTwo = "ALIEN MISSED! Alien: Narrow escape";
 
       console.log("%c ALIEN MISSED! Alien: Narrow Escape", "background:red; color:white; font-weight:bold; font-size:25px; color:black;")
     }
-    messageEl.textContent = message;
+    alienMessage.textContent = messageTwo;
   }
 }
 
@@ -71,12 +73,12 @@ btnEl.addEventListener('click', function () {
         btnEl.remove();
         retreatEl.remove();
         message = "Aliens Win! Reset To Play Again";
-        console.log("%c Aliens Win! Reset To Play Again", "background:goldenrod; border: 2px solid green; font-weight:bold; font-size:35px; color:black;")
+        console.log("%c Aliens Win! Reset To Play Again", "background:goldenrod; border: 4px solid green; font-weight:bold; font-size:45px; color:black;")
       }
       // Remove one ship from the array when one ship hull is below 0
     } else {
       numEnemy.shift();
-      message = "Alienship Down"
+      messageTwo = "Alienship Down"
       console.log("%c Alienship Down", "background:green; color:white; font-weight:bold; font-size:25px; color:black;");
 
       // Remove buttons if player wins
@@ -84,9 +86,10 @@ btnEl.addEventListener('click', function () {
         btnEl.remove();
         retreatEl.remove();
         message = "Player Wins! Reset To Play Again";
-        console.log("%c Player Wins! Reset To Play Again", "background:goldenrod; border: 2px solid green; font-weight:bold; font-size:35px; color:black;")
+        console.log("%c Player Wins! Reset To Play Again", "background:goldenrod; border: 4px solid green; font-weight:bold; font-size:45px; color:black;")
       }
       messageEl.textContent = message;
+      alienMessage.textContent = messageTwo;
     }
   }
 });
